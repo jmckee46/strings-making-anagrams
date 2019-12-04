@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func makeAnagram(a string, b string) int32 {
 	var deletions int32
 
@@ -10,7 +8,6 @@ func makeAnagram(a string, b string) int32 {
 
 	for i := 0; i < 26; i++ {
 		deletions += absoluteValue(stringCountA[i] - stringCountB[i])
-		fmt.Println(deletions)
 	}
 
 	return deletions
@@ -22,7 +19,6 @@ func stringCount(x string) []int32 {
 		stringCount[int(value)-97]++
 	}
 
-	fmt.Println(stringCount)
 	return stringCount
 }
 
